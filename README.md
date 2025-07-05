@@ -79,6 +79,7 @@ To update the configs:
 - Uncomment the lines found in `~/.config/hypr/custom/env.conf`
 
 ### Common fixes
+- The Dark/Light and theme switcher wont work on first login, please select the "6) Update config files with exclusions" in the setup after your initial login to fix the permission error.
 - If you want to raise your volume above the limit of 90, open `~/.config/illogical-impulse/config.json` and set the max volume allowed to 100. This is just a safety measure.
 - If you're experiencing missing or broken icons, try switching your icon pack in the KDE settings, it's an issue with Adwaita. I use the Colloid icon pack.
 
