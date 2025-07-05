@@ -81,7 +81,7 @@ sudo dnf install appstream-util libsoup3-devel uv -y
 sudo dnf install -y make --allowerasing
 
 # Quickshell stuff
-sudo dnf install -y --allowerasing plasma-desktop plasma-nm bluedevil plasma-systemmonitor wtype matugen quickshell-git grimblast kde-material-you-colors mpvpaper ffmpeg
+sudo dnf install -y --allowerasing plasma-desktop plasma-nm kdialog bluedevil plasma-systemmonitor wtype matugen quickshell-git grimblast kde-material-you-colors mpvpaper ffmpeg
 
 # Build & install anyrun
 cd "$t"
