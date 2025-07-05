@@ -55,7 +55,7 @@ sudo dnf install coreutils wl-clipboard xdg-utils curl fuzzel rsync wget ripgrep
 sudo dnf install brightnessctl ddcutil -y
 
 # Audio & media
-sudo dnf install pavucontrol wireplumber libdbusmenu-gtk3-devel libdbusmenu playerctl swww -y
+sudo dnf install pavucontrol wireplumber libdbusmenu-gtk3-devel libdbusmenu playerctl swww cava -y
 
 # Other individual tools
 sudo dnf install yad -y
@@ -81,7 +81,7 @@ sudo dnf install appstream-util libsoup3-devel uv -y
 sudo dnf install -y make --allowerasing
 
 # Quickshell stuff
-sudo dnf install -y --allowerasing plasma-desktop plasma-nm kdialog bluedevil plasma-systemmonitor wtype matugen quickshell-git grimblast kde-material-you-colors mpvpaper ffmpeg
+sudo dnf install -y --allowerasing python-opencv plasma-desktop plasma-nm kdialog bluedevil plasma-systemmonitor wtype matugen quickshell-git grimblast kde-material-you-colors mpvpaper ffmpeg
 
 # Build & install anyrun
 cd "$t"
