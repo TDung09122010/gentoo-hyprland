@@ -99,6 +99,16 @@ cd "$t"
 url=$(curl -s https://api.github.com/repos/sass/dart-sass/releases/latest \
     | jq -r '.assets[] | select(.name | test("linux-x64.tar.gz$")) | .browser_download_url')
 
+#upscayl
+cd "$t"
+url=$(curl -s https://api.github.com/repos/upscayl/upscayl/releases/latest \
+  | jq -r '.assets[] | select(.name | test("\\.rpm$")) | .browser_download_url')
+
+wget "$url"
+rpm_file="${url##*/}"
+sudo dnf install -y "$rpm_file"
+
+#dart-sass
 wget "$url"
 tar -xzf dart-sass-*-linux-x64.tar.gz
 cd dart-sass
