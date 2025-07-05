@@ -60,6 +60,7 @@ copy_dotfiles_smart() {
     [[ -e ~/.config/hypr/custom ]] && RSYNC_EXCLUDES+=(--exclude 'hypr/custom/**')
     [[ -e ~/.config/hypr/hyprland.conf ]] && RSYNC_EXCLUDES+=(--exclude 'hypr/hyprland.conf')
     [[ -e ~/.config/kde-material-you-colors/config.conf ]] && RSYNC_EXCLUDES+=(--exclude 'kde-material-you-colors/config.conf')
+    [[ -e ~/.config/hypr/hypridle.conf ]] && RSYNC_EXCLUDES+=(--exclude 'hypr/hypridle.conf')
     
     rsync -a "${RSYNC_EXCLUDES[@]}" .config/ ~/.config/ \
         || { echo -e "${RED}❌ Failed copying to ~/.config${NC}"; exit 1; }
