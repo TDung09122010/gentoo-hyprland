@@ -94,11 +94,6 @@ mkdir -p ~/.config/anyrun/plugins
 cp target/release/*.so ~/.config/anyrun/plugins
 cp examples/config.ron ~/.config/anyrun/config.ron
 
-# Custom tool: dart-sass
-cd "$t"
-url=$(curl -s https://api.github.com/repos/sass/dart-sass/releases/latest \
-    | jq -r '.assets[] | select(.name | test("linux-x64.tar.gz$")) | .browser_download_url')
-
 #upscayl
 cd "$t"
 url=$(curl -s https://api.github.com/repos/upscayl/upscayl/releases/latest \
@@ -107,6 +102,11 @@ url=$(curl -s https://api.github.com/repos/upscayl/upscayl/releases/latest \
 wget "$url"
 rpm_file="${url##*/}"
 sudo dnf install -y "$rpm_file"
+
+# Custom tool: dart-sass
+cd "$t"
+url=$(curl -s https://api.github.com/repos/sass/dart-sass/releases/latest \
+    | jq -r '.assets[] | select(.name | test("linux-x64.tar.gz$")) | .browser_download_url')
 
 #dart-sass
 wget "$url"
