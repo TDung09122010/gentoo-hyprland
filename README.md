@@ -61,7 +61,8 @@ To update the configs:
 
 1. Make sure you have read the Notes
 2. Run the script again.
-3. Select **option 1** again in the menu.
+3. Delete and re-clone the directory if it asks you to
+4. Select **option 1** again in the menu.
 
 ---
 
